@@ -6,6 +6,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_dashboard.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setup()
+
     }
     private fun setup(){
         btn_registrar.setOnClickListener{
@@ -40,6 +43,8 @@ class MainActivity : AppCompatActivity() {
                     }
             }
         }
+
+
     }
 
     private fun showAlertErrorLogin() {
